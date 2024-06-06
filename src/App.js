@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+//import './App.css';
+import {  } from 'react-icons/fa';
+//import { HiOutlineSearch } from "react-icons/hi";
+import { FaCalendarAlt } from "react-icons/fa";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Container,Col,Row , Card, ListGroup} from 'react-bootstrap';
+import Search from './components/Search';
+import AddAppointments from './components/AddAppointments';
+import appointList from "./data.json";
+import AppointmentInfo from './components/AppointmentInfo';
 
 function App() {
+//  let [appointmentList,setAppointmentList] = useState();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+        <Row>
+          <Col>
+          <h1 className='text-center fw-light mt-3'><FaCalendarAlt />Appointment</h1>
+         
+ 
+          </Col>
+        </Row>
+        <Row className='justify-content-center'>
+<AddAppointments/>
+        </Row>
+        <Row className='justify-content-center'>
+          <Col md={4}>
+          <Search/>
+          </Col>
+         
+        </Row>
+        <Row className='justify-content-center'>
+<Col md="8">
+  <Card className="mb-3">
+<Card.Header>Appointments</Card.Header>
+<ListGroup variant="flush">
+{appointList.map(appointment=>(
+  <AppointmentInfo key={appointment.id} appointment={appointment}/>
+))}
+</ListGroup>
+  </Card>
+</Col>
+        </Row>
+      </Container>
+ 
     </div>
   );
 }

@@ -1,0 +1,28 @@
+[
+    {
+        "id":0,
+        "firstname":"Sandra",
+        "lastname":"Asante",
+        "aptDate":"2024-06-05 13:30",
+        "aptNotes":"I have a doctor appoinrtym"
+
+    },
+
+    {
+        "id":1,
+        "firstname":"Sandra",
+        "lastname":"Asante",
+        "aptDate":"2024-06-05 13:30",
+        "aptNotes":"I have a doctor appoinrtym"
+
+    },
+
+    {
+        "id":2,
+        "firstname":"Kwame",
+        "lastname":"Keki",
+        "aptDate":"2024-06-05 15:30",
+        "aptNotes":"I have a doctor "
+
+    }
+]
