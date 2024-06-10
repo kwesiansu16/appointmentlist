@@ -10,7 +10,7 @@ function AddAppointments() {
     <Col md="8">
         <Card className="mb-3">
             <Card.Header>
-                Add Appointment
+                Add Appointments
                 <Button size="sm" className='small float-end' onClick={()=>{setToggleForm(!toggleForm)}}>+</Button>
             </Card.Header>
 { toggleForm &&
